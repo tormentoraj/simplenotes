@@ -117,15 +117,9 @@ fun NoteEditScreen(
                     .fillMaxWidth()
                     .padding(16.dp)
             ) {
-                BasicTextField(
-                    value = title,
-                    onValueChange = { title = it }
-                )
+                BasicTextField(value = title)
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
-                BasicTextField(
-                    value = content,
-                    onValueChange = { content = it }
-                )
+                BasicTextField(value = content)
             }
         }
     }
