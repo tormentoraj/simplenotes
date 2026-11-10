@@ -10,8 +10,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.Color
 import com.example.simplenotes.data.preferences.ThemePreferences
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.schedulers.Schedulers
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 val LightColorScheme = lightColorScheme(
     primary = Color(0xFF1B1B1F),
@@ -99,8 +100,7 @@ object Typography {
 }
 
 fun saveThemePreference(application: Application, isDark: Boolean) {
-    ThemePreferences.setDarkMode(application, isDark)
-        .subscribeOn(Schedulers.io())
-        .observeOn(AndroidSchedulers.mainThread())
-        .subscribe()
+    CoroutineScope(Dispatchers.IO).launch {
+        ThemePreferences.setDarkMode(application, isDark)
+    }
 }

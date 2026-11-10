@@ -70,13 +70,8 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
 
-    // DataStore with RxJava
+    // DataStore (preferences with Flow)
     implementation("androidx.datastore:datastore-preferences:1.1.4")
-    implementation("androidx.datastore:datastore-preferences-rxjava3:1.1.4")
-
-    // RxJava (rxandroid 3.1.6 is latest for RxJava 3)
-    implementation("io.reactivex.rxjava3:rxjava:3.1.10")
-    implementation("io.reactivex.rxjava3:rxandroid:3.1.6")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.1")
