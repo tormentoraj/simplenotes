@@ -136,7 +136,7 @@ fun NoteEditScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .fillMaxSize(0.8f),
-                    minLines = 10,
+                    singleLine = false,
                     maxLines = 50,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                 )
