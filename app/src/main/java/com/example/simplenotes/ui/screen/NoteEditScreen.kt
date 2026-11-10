@@ -120,18 +120,12 @@ fun NoteEditScreen(
                 BasicTextField(
                     value = title,
                     onValueChange = { title = it },
-                    modifier = Modifier.fillMaxWidth(),
                     singleLine = true
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
                 BasicTextField(
                     value = content,
                     onValueChange = { content = it },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .fillMaxSize(0.8f)
-                        .padding(16.dp)
-                        .background(MaterialTheme.colorScheme.surfaceContainerHighest),
                     singleLine = false
                 )
             }
