@@ -16,7 +16,6 @@ import androidx.compose.material3.FilledTextField
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -129,7 +128,7 @@ fun NoteEditScreen(
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
-                OutlinedTextField(
+                FilledTextField(
                     value = content,
                     onValueChange = { content = it },
                     label = { Text("Content") },
