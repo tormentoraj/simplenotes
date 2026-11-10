@@ -124,7 +124,6 @@ fun NoteEditScreen(
                     onValueChange = { title = it },
                     label = { Text("Title") },
                     modifier = Modifier.fillMaxWidth(),
-                    singleLine = true,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
@@ -135,7 +134,6 @@ fun NoteEditScreen(
                     modifier = Modifier
                         .fillMaxWidth()
                         .fillMaxSize(0.8f),
-                    singleLine = false,
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                 )
             }
