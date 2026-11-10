@@ -119,14 +119,12 @@ fun NoteEditScreen(
             ) {
                 BasicTextField(
                     value = title,
-                    onValueChange = { title = it },
-                    singleLine = true
+                    onValueChange = { title = it }
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
                 BasicTextField(
                     value = content,
-                    onValueChange = { content = it },
-                    singleLine = false
+                    onValueChange = { content = it }
                 )
             }
         }
