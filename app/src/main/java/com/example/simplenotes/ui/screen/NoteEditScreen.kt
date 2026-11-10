@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.foundation.text.KeyboardType
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -123,8 +121,7 @@ fun NoteEditScreen(
                     value = title,
                     onValueChange = { title = it },
                     label = { Text("Title") },
-                    modifier = Modifier.fillMaxWidth(),
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
+                    modifier = Modifier.fillMaxWidth()
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
                 FilledTextField(
@@ -133,8 +130,7 @@ fun NoteEditScreen(
                     label = { Text("Content") },
                     modifier = Modifier
                         .fillMaxWidth()
-                        .fillMaxSize(0.8f),
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
+                        .fillMaxSize(0.8f)
                 )
             }
         }
