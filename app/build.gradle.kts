@@ -2,7 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -64,11 +64,11 @@ dependencies {
     // Navigation Compose
     implementation("androidx.navigation:navigation-compose:2.8.7")
 
-    // Room
+    // Room with KSP
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     // DataStore (preferences with Flow)
     implementation("androidx.datastore:datastore-preferences:1.1.4")
