@@ -119,16 +119,12 @@ fun NoteEditScreen(
             ) {
                 FilledTextField(
                     value = title,
-                    onValueChange = { title = it },
-                    modifier = Modifier.fillMaxWidth()
+                    onValueChange = { title = it }
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
                 FilledTextField(
                     value = content,
-                    onValueChange = { content = it },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .fillMaxSize(0.8f)
+                    onValueChange = { content = it }
                 )
             }
         }
