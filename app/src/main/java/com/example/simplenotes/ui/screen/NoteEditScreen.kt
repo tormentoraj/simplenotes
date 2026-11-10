@@ -18,6 +18,7 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextField
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -128,7 +129,7 @@ fun NoteEditScreen(
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Text)
                 )
                 androidx.compose.foundation.layout.Spacer(modifier = Modifier.size(16.dp))
-                FilledTextField(
+                TextField(
                     value = content,
                     onValueChange = { content = it },
                     label = { Text("Content") },
